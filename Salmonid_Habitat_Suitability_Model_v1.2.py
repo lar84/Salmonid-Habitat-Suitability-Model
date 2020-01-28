@@ -34,8 +34,8 @@ class Application(Frame):
 ###############################################################################
     def createWidgets(self):
         #define tkinter buttons, labels, etc...
-        self.title = Label(text = 'Salmonid Habitat Suitability Model')
-        self.title.config(font=('Calibri',18))
+        title = Label(text = 'Salmonid Habitat Suitability Model')
+        title.config(font=('Calibri',18))
         self.values = ['Adult Chinook Spawning Large River',
                   'Adult Chinook Spawning Small River',
                   'Juvenile Chinook Rearing',
@@ -44,31 +44,31 @@ class Application(Frame):
                   'Adult Sockeye Spawning',
                   'Juvenile/Adult Rainbow Trout Rearing']
         self.dropdown = Combobox(values=self.values)
-        self.dropdownLabel = Label(text='Salmonid species/lifestage: ')
+        dropdownLabel = Label(text='Salmonid species/lifestage: ')
         self.inputfileDep = Entry()
         self.inputfileVel = Entry()
         self.exportCompleteRaster = Label(text = '')
-        self.devLabel = Label(text='Developed in Python 3.7 by Luke Russell, last update Jan 2020')
-        self.devLabel.config(font=('Calibri',8))
+        devLabel = Label(text='Developed in Python 3.7 by Luke Russell, last update Jan 2020')
+        devLabel.config(font=('Calibri',8))
         
         #place tkinter objects onto grid
         self.inputfileDep.grid(column=1, row=1, sticky="ew",columnspan= 2,padx=10,pady=5)
         self.inputfileVel.grid(column=1, row=2, sticky="ew",columnspan= 2,padx=10,pady=5)
-        self.title.grid(column=0, row=[0], columnspan = 3, sticky="ew")
-        self.dropdownLabel.grid(column=0,row=3,sticky='ew',columnspan=2,padx=10,pady=10)
+        title.grid(column=0, row=[0], columnspan = 3, sticky="ew")
+        dropdownLabel.grid(column=0,row=3,sticky='ew',columnspan=2,padx=10,pady=10)
         self.dropdown.grid(column=2,row=3,sticky='ew',padx=10,pady=10) 
         self.exportCompleteRaster.grid(column=2,row=7,sticky='ew',columnspan=2)
-        self.devLabel.grid(column=0,row=8,columnspan=3,sticky='w')
+        devLabel.grid(column=0,row=8,columnspan=3,sticky='w')
         
         #place tkinter buttons
-        self.openDepth = Button(text = 'Open Depth Raster', command = self.openDep)
-        self.openDepth.grid(column=0, row=1, sticky="ew",padx=10,pady=5)
+        openDepth = Button(text = 'Open Depth Raster', command = self.openDep)
+        openDepth.grid(column=0, row=1, sticky="ew",padx=10,pady=5)
         
-        self.openVelocity = Button(text = 'Open Velocity Raster', command = self.openVel)
-        self.openVelocity.grid(column=0, row=2, sticky="ew",padx=10,pady=5)
+        openVelocity = Button(text = 'Open Velocity Raster', command = self.openVel)
+        openVelocity.grid(column=0, row=2, sticky="ew",padx=10,pady=5)
         
-        self.exportShp = Button(text = 'Export As Raster', command = self.exportRaster)
-        self.exportShp.grid(column=0, row=7, sticky="ew",columnspan=2,padx=10,pady=5)
+        exportShp = Button(text = 'Export As Raster', command = self.exportRaster)
+        exportShp.grid(column=0, row=7, sticky="ew",columnspan=2,padx=10,pady=5)
 
 ###############################################################################
     def createCurves(self):
