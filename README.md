@@ -31,3 +31,10 @@ References:
 Washington Department of Fish and Wildlife Instream Flow Study Guidelines:
 	https://fortress.wa.gov/ecy/publications/documents/0411007.pdf
 
+Version updates:
+Version 1.2 updated January 2020
+Put entire code into a class to do away with global variables
+Changed depth/velocity inputs from labels to entry boxes to allow for easy copy/paste of raster file locations
+
+Version 1.1 updated January 2020
+Added preference curves for Juvenile Coho Rearing and Juvenile/Adult Rainbow Trout Rearing
