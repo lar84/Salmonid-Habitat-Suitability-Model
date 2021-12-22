@@ -12,23 +12,15 @@ A model of salmonid habitat suitability in rivers and streams that uses hydrauli
   •	Load the depth and velocity rasters using the ‘Open xxxxxx’ buttons.
   
   •	Select the salmonid species and life stage from the dropdown menu.
-  
-    o	All data for the preference curves comes from the Washington Dept. of Fish and Wildlife (WDFW) Instream Flow Study Guidelines (last updated March 2016)
-    
-    o	For Chinook small rivers have <3,000 cfs mean annual flow, and according to the WDFW the only ‘large’ rivers (>3,000 cfs MAF) are the Skagit and Snohomish
-    
-    o	Coho and Sockeye juvenile preference curves are not supported in the WDFW study
-    
+     
   •	The ‘Export As Raster’ button creates a .tif file of the habitat suitability normalized from 0 to 1.
-  
-    o	The spatial reference for the raster will be whatever was used in the input rasters, but the projection is not defined when opened in ArcGIS (or other GIS applications).
-    
-**How does it work:**
+      
+**How it works:**
   1.	The input depth and velocity rasters are converted into numpy arrays.
-  2.	Two piece-wise suitability curves (for both depth and velocity) are created from the chosen species/life stage.
-  3.	The numpy arrays are then normalized to the suitability curves, so that each value in each array is converted into the corresponding suitability value 
+  2.	Two linear suitability curves (for both depth and velocity) are created from the chosen species/life stage.
+  3.	The numpy arrays are then normalized to the suitability curves, so that each pixels' depth/velocity values are converted into the corresponding suitability value 
   4.	The normalized depth and velocity arrays are then multiplied together to create a final suitability array.
-  5.	The final array is then converted back into a raster.
+  5.	The final numpy array is then converted back into a raster.
   
 **Python libraries and dependencies used:**
   •	Numpy
