@@ -1,6 +1,12 @@
 # Salmonid-Habitat-Suitability-Model
 A model of salmonid habitat suitability in rivers and streams that uses hydraulic models of depth and velocity as inputs, and models salmonid preference/suitability from the Washington State Dept. of Fish and Wildlife In-Stream Study Guidelines.
 
+**How to download**
+
+  •	Download the latest release (right side of this page) and run the application (exe file).
+  
+  •	You can also run in python, but make sure that the required dependencies are installed first.
+
 **Setting up the input files:**
 
   •	The program requires two single-band rasters (depth/velocity) of the same extent and pixel size.
