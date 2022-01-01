@@ -15,6 +15,8 @@ A model of salmonid habitat suitability in rivers and streams that uses hydrauli
 
 **Running the program:**
 
+![image](https://user-images.githubusercontent.com/60400139/147862003-96990676-d256-42db-b8c8-c409d52838d1.png)
+
   •	Load the depth and velocity rasters using the ‘Open xxxxxx’ buttons.
   
   •	Select the salmonid species and life stage from the dropdown menu.
